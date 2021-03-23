@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      border:5px solid;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="show();">Show</button>
+  <button onclick="reset();">Clear</button><br>
+  <img id="result1"src="img/0.jpg" alt="">
+  <img id="result2"src="img/0.jpg" alt="">
+  <img id="result3"src="img/0.jpg" alt="">
+  <script>
+      var a = 0;
+      var b = 0;
+      var c = 0;
+      function reset() {
+        console.log("test");
+        document.getElementById('result1').setAttribute('src',"img/0.jpg");
+        document.getElementById('result2').setAttribute('src',"img/0.jpg");
+        document.getElementById('result3').setAttribute('src',"img/0.jpg");
+      }
+      function show() {
+        a = parseInt(Math.random() * 100) %6;
+        b = parseInt(Math.random() * 100) %6;
+        c = parseInt(Math.random() * 100) %6;
+        console.log(a);
+        if (a == 0) {
+          document.getElementById('result1').setAttribute('src',"img/1.jpg");
+        } else if(a == 1){
+          document.getElementById('result1').setAttribute('src',"img/2.jpg");
+        } else if(a == 2){
+          document.getElementById('result1').setAttribute('src',"img/3.jpg");
+        } else if(a == 3){
+          document.getElementById('resul1').setAttribute('src',"img/4.jpg");
+        } else if(a == 4){
+          document.getElementById('result1').setAttribute('src',"img/5.jpg");
+        } else if(a == 5){
+          document.getElementById('result1').setAttribute('src',"img/6.jpg");
+        }
+        if (b == 0) {
+          document.getElementById('result').setAttribute('src',"img/1.jpg");
+        } else if(b == 1){
+          document.getElementById('result').setAttribute('src',"img/2.jpg");
+        } else if(b == 2){
+          document.getElementById('result').setAttribute('src',"img/3.jpg");
+        } else if(b == 3){
+          document.getElementById('result').setAttribute('src',"img/4.jpg");
+        } else if(b == 4){
+          document.getElementById('result').setAttribute('src',"img/5.jpg");
+        } else if(b == 5){
+          document.getElementById('result').setAttribute('src',"img/6.jpg");
+        }
+        
+        if (c == 0) {
+          document.getElementById('result').setAttribute('src',"img/1.png");
+        } else if(c == 1){
+          document.getElementById('result').setAttribute('src',"img/2.png");
+        } else if(c == 2){
+          document.getElementById('result').setAttribute('src',"img/3.png");
+        } else if(c == 3){
+          document.getElementById('result').setAttribute('src',"img/4.png");
+        } else if(c == 4){
+          document.getElementById('result').setAttribute('src',"img/5.png");
+        } else if(c == 5){
+          document.getElementById('result').setAttribute('src',"img/6.png");
+        }
+      }
+  </script>
+</body>
+</html>
